@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scene1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1100.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.presController">
+   <children>
+      <Label fx:id="label1" layoutX="598.0" layoutY="21.0" prefHeight="46.0" prefWidth="210.0" text="Prescription" textFill="#009688">
+         <font>
+            <Font name="Georgia" size="35.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutY="-4.0" prefHeight="869.0" prefWidth="308.0" style="-fx-background-color: #009688;">
+         <children>
+            <ImageView fx:id="idImg" fitHeight="183.0" fitWidth="186.0" layoutX="62.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@1.png" />
+               </image>
+            </ImageView>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="-2.0" layoutY="221.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #009688;" text="COMPTE" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="-2.0" layoutY="293.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #009688;" text="RENDEZ-VOUS" textFill="WHITE">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="-2.0" layoutY="365.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #009688;" text="RECLAMATION" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="-2.0" layoutY="437.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #009688;" text="SETTINGS" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="prescMod" layoutX="605.0" layoutY="778.0" mnemonicParsing="false" onAction="#prescmodif" prefHeight="38.0" prefWidth="186.0" style="-fx-background-radius: 30; -fx-background-color: #009688;" text="modifier" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="prescadd" layoutX="318.0" layoutY="778.0" mnemonicParsing="false" onAction="#prescAdd" prefHeight="43.0" prefWidth="258.0" style="-fx-background-radius: 30; -fx-background-color: #009688;" text="Ajouter " textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="prescsu" layoutX="820.0" layoutY="778.0" mnemonicParsing="false" onAction="#prescDel" prefHeight="43.0" prefWidth="258.0" style="-fx-background-radius: 30; -fx-background-color: #009688;" text="supprimer" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="24.0" />
+         </font>
+      </Button>
+      <Label fx:id="label1" layoutX="337.0" layoutY="457.0" text="Insérer le nom de médicament :" />
+      <TextField fx:id="idnom" layoutX="576.0" layoutY="442.0" />
+      <Label layoutX="337.0" layoutY="517.0" prefHeight="21.0" prefWidth="187.0" text="Insérer le dosage par jour:" />
+      <TextField fx:id="iddose" layoutX="573.0" layoutY="512.0" />
+      <Label layoutX="337.0" layoutY="592.0" text="Insérer votre siganture :" />
+      <TableView fx:id="idtab2" layoutX="337.0" layoutY="102.0" prefHeight="294.0" prefWidth="732.0">
+        <columns>
+          <TableColumn fx:id="nomCol" prefWidth="217.0" text="nom de médicaments " />
+          <TableColumn fx:id="doseCol" prefWidth="173.0" text="dosage" />
+            <TableColumn fx:id="sigCol" prefWidth="341.0" text="signature" />
+        </columns>
+      </TableView>
+      <TextField fx:id="idsig" layoutX="573.0" layoutY="587.0" />
+      <ImageView fitHeight="164.0" fitWidth="202.0" layoutX="851.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pngtree-clinical-record-medical-health-report-png-image_4683311.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
